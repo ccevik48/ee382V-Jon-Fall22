@@ -1,0 +1,33 @@
+{
+    "manifest_version": 3,
+    "name": "Block Clock",
+    "version": "1.0.1",
+    "icons":
+    {
+        "128": "icon128.png",
+        "48": "icon48.png",
+        "16": "icon16.png"
+    },
+	"action": {
+        "default_icon": "icon16.png"
+
+    },
+	"permissions": [
+		"scripting"
+    ],
+    "background": {
+        "service_worker": "background.js"
+      },
+    "content_scripts": [
+        {
+          "matches": ["http://*/*","https://*/*"],
+          "css": ["style.css"],
+          "js": []
+        }
+    ],
+    "host_permissions": [
+        "*://*/*"
+    ]
+
+
+}
